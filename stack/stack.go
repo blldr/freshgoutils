@@ -32,3 +32,7 @@ func (s *Stack[T]) Pop() *node[T] {
 	s.length -= 1
 	return tmp
 }
+
+func (s *Stack[T]) Length() int {
+	return s.length
+}
