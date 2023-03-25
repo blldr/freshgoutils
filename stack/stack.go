@@ -23,14 +23,14 @@ func (s *Stack[T]) Push(value T){
 	s.length += 1
 }
 
-func (s *Stack[T]) Pop() *node[T] {
+func (s *Stack[T]) Pop() *T {
 	if s.length == 0 {
 		return nil
 	}
 	tmp := s.head
 	s.head = tmp.prev
 	s.length -= 1
-	return tmp
+	return &tmp.value
 }
 
 func (s *Stack[T]) Length() int {
